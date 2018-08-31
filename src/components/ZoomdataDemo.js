@@ -5,7 +5,7 @@ import BodyContainer from './BodyContainer';
 const ZoomdataDemo = () => (
     <div>
         <Header />
-        <BodyContainer />
+        <BodyContainer />   
     </div>
 );
 

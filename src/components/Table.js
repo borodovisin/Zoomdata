@@ -8,7 +8,7 @@ class Table extends Component {
     }
 
     queryConfig = {
-        fields: [{ name: 'payment_type', limit: 18 }, { name: 'country' }, 
+        fields: [{ name: 'payment_type', limit: 17 }, { name: 'country' }, 
         {name: 'city'}, {name: 'state'}, {name: 'product'}, {name: 'name'}],
     }
 
@@ -48,25 +48,27 @@ class Table extends Component {
 
     render() {
         return (
-            <div className="chart-container">
-                <div className="chart-container__stage">
-                    <table className="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>Payment type</th>
-                                <th>Country</th>
-                                <th>City</th>
-                                <th>State</th>
-                                <th>Product</th>
-                                <th>Name</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.tableBody}
-                        </tbody>
-                    </table>
+                <div className="chart-container">
+                    <div className="chart-container__stage">
+                    <div class="table-wrapper-scroll-y">
+                        <table className="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Payment type</th>
+                                    <th>Country</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Product</th>
+                                    <th>Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {this.state.tableBody}
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
                 </div>
-            </div>
         );
     }
 }

@@ -1,15 +1,16 @@
 
 table thead tr {
     color: #4B4453;
+    text-transform: uppercase;
 }
 
 table tbody tr {
-    border-left: 2px solid white;
+    border-left: 10px solid white;
     color: grey;
 }
 
 table tbody tr:hover {
-    border-left: 2px solid #00C0A3;
+    border-left: 10px solid #4BB7C4;
 }
 table tbody tr td:hover {
     text-decoration: underline;
@@ -26,3 +27,10 @@ table tbody tr td:hover {
     border-radius: 3%;
     background: #009efb;
 }
+
+.table-wrapper-scroll-y {
+    display: block;
+    height: 74vh;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }

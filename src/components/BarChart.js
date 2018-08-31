@@ -8,15 +8,15 @@ class BarChart extends Component {
         showLoading: true,
         loadingOption: {
             text: "",
-            color: '#00C0A3',
+            color: '#97CD2D',
             textColor: '#000',
             maskColor: 'rgba(255, 255, 255, 0.8)',
             zlevel: 0
         },
         option: {
-            color: ["#00C0A3"],
+            color: ["#4BB7C4"],
             title: {
-                text: `Country filted by: ${this.props.zoomdataFilter}`,
+                text: `COUNTRY FILTER BY: ${this.props.zoomdataFilter}`,
                 left: 'center'
             },
             tooltip : {
@@ -110,7 +110,7 @@ class BarChart extends Component {
                 <div className="chart-container__title">{containerTitle}</div>
                 <div className="chart-container__stage">
                     <ReactEcharts option={this.state.option} showLoading={this.state.showLoading} loadingOption={this.state.loadingOption}
-                        style={{height: '70rem', width: '100%'}}/>                
+                        style={{height: "70vh", width: '100%'}}/>                
                 </div>
             </div>
         );

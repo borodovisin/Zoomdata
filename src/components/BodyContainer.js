@@ -41,9 +41,8 @@ class BodyContainer extends Component {
 
     state = {
         pieSizeContainer: "col-sm-12",
-        displayBarChart: "none",
         barChart: undefined,
-        iconButton: <FontAwesomeIcon icon="table" />
+        iconButton: <FontAwesomeIcon icon="table" size="lg" />
     }
 
     componentDidMount = () => {
@@ -51,6 +50,7 @@ class BodyContainer extends Component {
     }
 
     handlePieSelected = async (e) => {
+        console.log(e);
         this.setState(() => ({pieSizeContainer: "col-sm-12", barChart: undefined}));
         const pieSelected = Object.keys(e.selected).find((k) => e.selected[k] ===  true);
         if (pieSelected){
@@ -68,18 +68,18 @@ class BodyContainer extends Component {
         if($("#idFirstRow").is(":hidden")){
             $("#idSecondRow").slideUp();
             $("#idFirstRow").show("slow");
-            this.setState(() => ({iconButton: <FontAwesomeIcon icon="table" />}));
+            this.setState(() => ({iconButton: <FontAwesomeIcon icon="table" size="lg" />}));
         } else {
             $("#idFirstRow").slideUp();
             $("#idSecondRow").show("slow");
-            this.setState(() => ({iconButton: <FontAwesomeIcon icon="chart-area" />}));
+            this.setState(() => ({iconButton: <FontAwesomeIcon icon="chart-area" size="lg" />}));
         }
     }
 
     render() {
         return (
             <div className="container-fluid">
-            <div id="idFirstRow" className="row">
+                <div id="idFirstRow" className="row">
                     <div className={this.state.pieSizeContainer}>
                         <PieChart zoomdataClient={this.getClient} zoomdataSource={source} 
                         handlePieSelected={this.handlePieSelected}/>
@@ -88,13 +88,14 @@ class BodyContainer extends Component {
                         {this.state.barChart}
                     </div>
                 </div>
-                <div id="idSecondRow" className="row">
+                <div id="idSecondRow" className="row" hidden>
                     <div className="col-sm-12">
-                        <Table zoomdataClient={this.getClient} zoomdataSource={source}  />
+                        <Table zoomdataClient={this.getClient} zoomdataSource={source} />
                     </div>
                 </div>
+                <div className="footer"></div>
                 <div className="fixed-div">
-                    <button className="fixed-btn up" id="idBtnShow" onClick={this.handleBtnShow}>{this.state.iconButton}</button>
+                    <button className="fixed-btn" onClick={this.handleBtnShow}>{this.state.iconButton}</button>
                 </div>
             </div>
         );
