@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
+import { pieTitle, colorShowLoading, colorPallete } from "../utils/constants";
 
 
 const containerTitle = "PIE CHART"
@@ -12,15 +13,15 @@ class PieChart extends Component {
         showLoading: true,
         loadingOption: {
             text: "",
-            color: '#97CD2D',
+            color: colorShowLoading,
             textColor: '#000',
             maskColor: 'rgba(255, 255, 255, 0.8)',
             zlevel: 0
         },
         option: {
-            color: ["#97CD2D", "#4BB7C4", "#B0A8B9", "#486485" ],
+            color: colorPallete,
             title: {
-                text: 'PAYMENT TYPE',
+                text: pieTitle,
                 left: 'center'
             },
             tooltip : {

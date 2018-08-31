@@ -1,13 +1,11 @@
 .fixed-btn {
-    background-color : #4BB7C4;
-    //border-color: $bg-general;
+    background-color : $btn-bg;
     color: $body-background;;
     border-radius: 100%;
     width: 80px;
     height: 80px;
-    outline: 0 !important;
+    outline: $zero !important;
     font-size: 20px;
-    //box-shadow: 0px 0px 5px 3px rgba(0,0,0,1);
     border: 5px solid $body-background;
     -webkit-animation-name: move;
     -webkit-animation-duration: 1s;

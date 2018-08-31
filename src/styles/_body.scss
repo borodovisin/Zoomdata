@@ -1,6 +1,6 @@
 .body-dashboard {
     background:  $body-background;
-    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: $font-general;
     padding-top: 80px; 
 }
 
@@ -8,9 +8,9 @@
     background-color : $bg-general;
     position: absolute;
     width: 100vw;
-    bottom: 0px;
+    bottom: $zero;
     height: 60px;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    right: $zero;
+    bottom: $zero;
+    left: $zero;
   }

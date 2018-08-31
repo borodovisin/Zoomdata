@@ -1,31 +1,19 @@
 
 table thead tr {
-    color: #4B4453;
+    color: $text-color;
     text-transform: uppercase;
 }
 
 table tbody tr {
-    border-left: 10px solid white;
-    color: grey;
+    border-left: 10px solid $white-color;
+    color: $grey-color;
 }
 
 table tbody tr:hover {
-    border-left: 10px solid #4BB7C4;
+    border-left: 10px solid $cyan-color;
 }
 table tbody tr td:hover {
     text-decoration: underline;
-}
-
-.round {
-    line-height: 45px;
-    color: #ffffff;
-    width: 45px;
-    height: 45px;
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    border-radius: 3%;
-    background: #009efb;
 }
 
 .table-wrapper-scroll-y {

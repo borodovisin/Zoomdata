@@ -1,32 +1,11 @@
 import React, { Component } from 'react';
 import $ from "jquery";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTable, faChartArea, ZoomdataSDK, application, 
+        credentials, source } from "../utils/constants";
 import PieChart from "./PieChart";
 import BarChart from "./BarChart";
 import Table from "./Table";
 
-// Zoomdata-client libarary
-const ZoomdataSDK = require("zoomdata-client")
-
-// Application config for connect
-const application = {
-    host: 'prototype.zoomdata.com',
-    port: 443,
-    path: '/zoomdata',
-    secure: true,
-  };
- 
-// Credentials for connect
-const credentials = {
-    key: 'rFvfOtfzQV',
-};
-
-// Source data
-const source = {
-    name: 'Sales (Dummy Data)',
-};
-
-const client = () => ZoomdataSDK.createClient({ application, credentials });
 
 class BodyContainer extends Component {
     getClient = async () => {
@@ -42,7 +21,7 @@ class BodyContainer extends Component {
     state = {
         pieSizeContainer: "col-sm-12",
         barChart: undefined,
-        iconButton: <FontAwesomeIcon icon="table" size="lg" />
+        iconButton: faTable
     }
 
     componentDidMount = () => {
@@ -50,7 +29,6 @@ class BodyContainer extends Component {
     }
 
     handlePieSelected = async (e) => {
-        console.log(e);
         this.setState(() => ({pieSizeContainer: "col-sm-12", barChart: undefined}));
         const pieSelected = Object.keys(e.selected).find((k) => e.selected[k] ===  true);
         if (pieSelected){
@@ -68,11 +46,11 @@ class BodyContainer extends Component {
         if($("#idFirstRow").is(":hidden")){
             $("#idSecondRow").slideUp();
             $("#idFirstRow").show("slow");
-            this.setState(() => ({iconButton: <FontAwesomeIcon icon="table" size="lg" />}));
+            this.setState(() => ({iconButton: faTable}));
         } else {
             $("#idFirstRow").slideUp();
             $("#idSecondRow").show("slow");
-            this.setState(() => ({iconButton: <FontAwesomeIcon icon="chart-area" size="lg" />}));
+            this.setState(() => ({iconButton: faChartArea}));
         }
     }
 

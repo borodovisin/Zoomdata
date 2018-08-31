@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactEcharts from 'echarts-for-react';
+import { barTitle, colorShowLoading, colorBar } from "../utils/constants";
 
 const containerTitle = "Bar chart"
 
@@ -8,15 +9,15 @@ class BarChart extends Component {
         showLoading: true,
         loadingOption: {
             text: "",
-            color: '#97CD2D',
+            color: colorShowLoading,
             textColor: '#000',
             maskColor: 'rgba(255, 255, 255, 0.8)',
             zlevel: 0
         },
         option: {
-            color: ["#4BB7C4"],
+            color: colorBar,
             title: {
-                text: `COUNTRY FILTER BY: ${this.props.zoomdataFilter}`,
+                text: `${barTitle} ${this.props.zoomdataFilter}`,
                 left: 'center'
             },
             tooltip : {

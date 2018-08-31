@@ -50,7 +50,7 @@ class Table extends Component {
         return (
                 <div className="chart-container">
                     <div className="chart-container__stage">
-                    <div class="table-wrapper-scroll-y">
+                    <div className="table-wrapper-scroll-y">
                         <table className="table table-hover">
                             <thead>
                                 <tr>
