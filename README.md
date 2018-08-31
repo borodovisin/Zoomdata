@@ -1,4 +1,4 @@
 # Zoomdata
-# The largest heading
-## The second largest heading
-###### The smallest heading
+
+## How used it
+<code>npm install</code>
