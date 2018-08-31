@@ -1,8 +1,7 @@
 # Zoomdata
 
 ## How use it
-<p>You must change to the root folder projects and install all the npm package dependencies:</p>
-<code>npm install</code>
+<p>First step is clone the repository to your local machine.</code>
 
 ## For run the project
 <p>Only run the following command:</p>
