@@ -7,5 +7,5 @@
 <p>Wait a few minutes for install all the packages</p>
 
 ## For run the project
-<p>Only run the following command:</p>
+<p>Put the next command in the console, inside the root projects directory:</p>
 <code>npm run dev</code>
