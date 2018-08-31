@@ -1,0 +1,25 @@
+.fixed-btn {
+    background-color : #4B4453;
+    color: white;
+    border-radius: 4px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    outline: 0 !important;
+    font-size: 20px;
+    -webkit-animation-name: move;
+    -webkit-animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  
+ .fixed-div {
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+  }
+
+@keyframes move {
+    0% {box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);}
+    50% {box-shadow: 0px 0px 5px 5px rgba(0,0,0,.3);}
+    100% {box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);}
+}

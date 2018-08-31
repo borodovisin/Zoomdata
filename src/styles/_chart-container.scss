@@ -1,0 +1,31 @@
+.chart-container {
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    border-radius: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.chart-container__title {
+    border-bottom: 1px solid #e7e7e7;
+    border-radius: 2px 2px 0 0;
+    font-size: 13px;
+    padding: 2px 10px 0;
+    text-transform: uppercase;
+}
+
+.chart-container .chart-container__title{
+    color: #4D4D4D;
+    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 32px;
+}
+
+.chart-container .chart-container__stage {
+    display: block;
+}
+
+.chart-container__stage {
+    padding: 10px;
+}

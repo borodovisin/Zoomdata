@@ -1,0 +1,28 @@
+
+table thead tr {
+    color: #4B4453;
+}
+
+table tbody tr {
+    border-left: 2px solid white;
+    color: grey;
+}
+
+table tbody tr:hover {
+    border-left: 2px solid #00C0A3;
+}
+table tbody tr td:hover {
+    text-decoration: underline;
+}
+
+.round {
+    line-height: 45px;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 3%;
+    background: #009efb;
+}
